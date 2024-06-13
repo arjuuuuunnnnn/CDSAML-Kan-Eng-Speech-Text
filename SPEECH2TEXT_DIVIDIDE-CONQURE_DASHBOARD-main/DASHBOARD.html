@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Audio Files Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #fileInput {
+            display: none;
+        }
+        label {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .playButton {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .hideColumn {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 50px; position: relative;">AI Assisted Hindi Speech to English Text System</h1>
+
+    <button onclick="convertTableToCSV()">Download as CSV</button>
+    <input type="file" id="fileInput" webkitdirectory directory multiple>
+    <label for="fileInput">Select Directory</label>
+
+    <table id="audioTable">
+        <thead>
+            <tr>
+                <th>Serial</th>
+                <th>File Name</th>
+                <th style="display: none;">Type</th>
+                <th>Duration</th>
+                <th>Play</th>
+                <th>POSSIBLE_HINDI_ASR_SOLUTIONS</th>
+                <th>  POSSIBLE_HINDI_ASR_SOLUTIONS_IN_TRANSLITERATION_LETTERS</th>
+                <th>TEXT_BOX_FOR_MANUAL_CORRECTION</th>
+                <th>CONVERTED_TEXT_FROM_TRANSLITERATION_TO_HINDI</th>
+                <th>BUTTON_TO_RUN_PUNCTUATION_MODELS </th>
+                <th>PUNCTUATION_MODELS</th>
+                <th>TEXT BOX FOR MANUAL CORRECTION POST PUNCTUATION</th>
+                <th>TRANSLITERATION FROM LEFT BOX</th>
+                <th>TRANSLITERATION FROM LEFT BOX</th>
+                <th>BUTTON TO RUN MACHINE TRANSLATION MODELS</th>
+                <th>POSSIBLE HINDI TO ENGLISH MT SOLUTIONS</th>
+                <th>TEXT BOX FOR MANUAL CORRECTION_MT</th>
+                <th>BUTTON TO RUN PUNCTUATION MODELS 2</th>
+                <th>PUNCTUATION MODELS 2</th>
+                <th>TEXT BOX FOR MANUAL CORRECTION POST PUNCTUATION 2</th>
+                <th>BUTTON FOR RUN TTS 2</th>
+                <th>ORITIGNAL HINDI AUDIO </th>
+                <th>FINAL HINDI TEXT </th>
+                <th>TRANSLITERATIO OF FINAL HINDI TEXT </th>
+                <th>FINAL ENGLISH TEXT </th>
+            </tr>
+        </thead>
+
+        <tbody id="audioTableBody">
+            
+        </tbody>
+    </table>
+
+    <script>
+function convertTableToCSV() {
+    const table = document.getElementById('audioTable');
+    const rows = table.querySelectorAll('tr');
+
+    let csvData = [];
+
+    for (let i = 0; i < rows.length; i++) {
+        const cols = rows[i].querySelectorAll('td, th');
+        const rowData = [];
+
+        for (let j = 0; j < cols.length; j++) {
+            if (j === 5) { // Assuming the fifth column (index 4) contains the dropdown
+                const dropdown = cols[j].querySelector('select');
+                if (dropdown) {
+                    const selectedOptions = [...dropdown.options].map(option => option.textContent);
+                    rowData.push(selectedOptions.join('&'));
+                } else {
+                    rowData.push('POSSIBLE_HINDI_ASR_SOLUTIONS ');
+                }
+            } else {
+                rowData.push(cols[j].innerText);
+            }
+        }
+
+        if (rowData.length > 0) {
+            csvData.push(rowData.join(','));
+        }
+    }
+
+    const csvContent = csvData.join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+
+    if (link.download !== undefined) {
+        const url = URL.createObjectURL(blob);
+        link.setAttribute('href', url);
+        link.setAttribute('download', 'audio_table_data.csv');
+        link.style.visibility = 'hidden';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+}
+
+
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const files = e.target.files;
+            const audioTableBody = document.getElementById('audioTableBody');
+            audioTableBody.innerHTML = '';
+
+            const sortedFiles = Array.from(files).sort((a, b) => {
+  const regex = /\d+/g;
+  const numA = parseInt(a.name.match(regex)[0]);
+  const numB = parseInt(b.name.match(regex)[0]);
+  
+  return numA - numB;
+});
+
+            sortedFiles.forEach((file, index) => {
+                const row = audioTableBody.insertRow();
+                const serialCell = row.insertCell(0);
+                const fileNameCell = row.insertCell(1);
+                const fileTypeCell = row.insertCell(2);
+                const fileDurationCell = row.insertCell(3);
+                const playButtonCell = row.insertCell(4);
+                const ASR = row.insertCell(5); // Inserting the ASR dropdown cell
+                const B = row.insertCell(6);
+                const C= row.insertCell(7);
+                const D = row.insertCell(8);
+                const punctuationButtonCell = row.insertCell(9); // Cell for BUTTON_TO_RUN_PUNCTUATION_MODELS button
+                const punctuationModelCell = row.insertCell(10);
+                const X = row.insertCell(11);
+                const V = row.insertCell(12);
+                const L= row.insertCell(13);
+                const Q = row.insertCell(14);
+                const W = row.insertCell(15);
+                const R = row.insertCell(16);
+                const T = row.insertCell(17);
+                const Y= row.insertCell(18);
+                const U = row.insertCell(19);
+                const F = row.insertCell(20);
+                const K = row.insertCell(21);
+                const G = row.insertCell(22);
+                const I= row.insertCell(23);
+                const hj= row.insertCell(23);
+
+                
+                serialCell.textContent = index + 1;
+                fileNameCell.textContent = file.name;
+                fileTypeCell.textContent = file.type || 'N/A';
+                fileTypeCell.classList.add('hideColumn');
+
+                const runButtonCell = row.insertCell(9); // Cell for the "Run" button
+    const runButton = document.createElement('button');
+    runButton.textContent = 'Run';
+    runButton.onclick = function() {
+        // Your logic for this Run button in the respective row (index: index)
+        console.log('Run button in Cell 9 for row:', index + 1);
+        const punctuationModelCell = row.cells[10];
+
+
+punctuationModelCell.textContent = 'New Value';
+    };
+    runButtonCell.appendChild(runButton);
+
+
+                const audio = document.createElement('audio');
+                audio.src = URL.createObjectURL(file);
+                audio.onloadedmetadata = function() {
+                    fileDurationCell.textContent = formatDuration(audio.duration);
+                };
+
+                const playButton = document.createElement('button');
+                playButton.textContent = 'Play';
+                playButton.classList.add('playButton');
+                
+                let isPlaying = false;
+                playButton.onclick = function() {
+                    if (isPlaying) {
+                        audio.pause();
+                        isPlaying = false;
+                    } else {
+                        audio.play();
+                        isPlaying = true;
+                    }
+                };
+                playButtonCell.appendChild(playButton);
+                
+                
+                // Add the ASR dropdown in the respective cell
+                const asrDropdown = document.createElement('select');
+                asrDropdown.classList.add('asrSolutionSelect');
+                asrDropdown.onchange = function() {
+                    handleASRSolutionSelection('asrSolution1');
+                };
+                const option1 = document.createElement('option');
+                option1.value = 'Option 1';
+                option1.textContent = 'Option 1';
+                const option2 = document.createElement('option');
+                option2.value = 'Option 2';
+                option2.textContent = 'Option 2';
+                const option3 = document.createElement('option');
+                option3.value = 'Option 3';
+                option3.textContent = 'Option 3';
+                asrDropdown.appendChild(option1);
+                asrDropdown.appendChild(option2);
+                asrDropdown.appendChild(option3);
+                ASR.appendChild(asrDropdown);
+            
+
+            });
+            const cellC = row.insertCell(7);
+
+const runButton = document.createElement('button');
+runButton.textContent = 'Run';
+runButton.onclick = function() {
+    // Your logic for this Run button in cell C
+    console.log('Run button in Cell C for row:', index + 1);
+};
+cellC.appendChild(runButton);
+        });
+
+        function formatDuration(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = Math.round(seconds % 60);
+            return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+        }
+
+        // Function to handle ASR solution selection
+        function handleASRSolutionSelection(id) {
+            // Your logic for handling ASR solution selection
+        }
+        
+       
+    </script>
+
+</body>
+</html>

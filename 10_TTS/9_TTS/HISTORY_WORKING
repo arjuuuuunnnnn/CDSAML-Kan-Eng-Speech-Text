@@ -1,0 +1,793 @@
+  condec
+  work_loc 
+  condec
+  work_loc 
+  cd 9_DENOISING/
+  ls
+  cd DENOISER_DNS_64/
+  g INSTALL.csh 
+  source INSTALL.csh 
+  g INSTALL.csh 
+  g ~/.bashrc 
+  source INSTALL.csh 
+  condec
+  du -sh .
+  work_loc 
+  cd 9_DENOISING/
+  ls
+  condec
+  ls
+  cd FullSubNet-main/
+  ls
+  cd FullSubNet-main/
+  ls
+  g INSTALL.csh 
+  g ~/.bashrc 
+  condec
+  work_loc 
+  cd 9_DENOISING/
+  cd DeepFilterNet-main/
+  ls
+  cd DeepFilterNet-main/
+  ls
+  g USUAGE.txt 
+  cd ..
+  ls
+  cd DeepXi-master/DeepXi-master/
+  ls
+  ls *csh
+  ls
+  cd ..
+  ls
+  cd ..
+  ls
+  cd -
+  ls
+  cd DeepXi-master/
+  ls
+  g DOCKER_PRESENT.txt 
+  python3 -m venv --system-site-packages ~/venv/DeepXi
+   apt install python3.11-venv
+   apt update -y
+  g ~/.bashrc 
+  condec
+  work_loc 
+  cd 11_Diarization/AUDIO_ANALYSIS_DASHBOARD-FLAVOUR-2/
+  ls
+  g INSTALL.csh 
+  source INSTALL.csh 
+  condec
+  cd ..
+  ls
+  cd ..
+  sl
+  ls
+  cd 9_DENOISING/
+  ls
+  g ~/Downloads/CUDA_INSTALL.csh 
+   apt-get install -y cuda-drivers
+   apt-get install -y nvidia-kernel-open-545
+   apt-get install -y cuda-drivers-545
+  wget https://developer.download.nvidia.com/compute/cudnn/9.0.0/local_installers/cudnn-local-repo-ubuntu2204-9.0.0_1.0-1_amd64.deb
+   dpkg -i cudnn-local-repo-ubuntu2204-9.0.0_1.0-1_amd64.deb
+   cp /var/cudnn-local-repo-ubuntu2204-9.0.0/cudnn-*-keyring.gpg /usr/share/keyrings/
+   apt-get update
+   apt-get -y install cudnn
+  cd ~
+  ./OneDriveGUI-1.0.3_fix116-x86_64.AppImage 
+  ls
+  rm -rf ~/Downloads/cuda-repo-ubuntu2204-12-3-local_12.3.2-545.23.08-1_amd64.deb 
+  ./OneDriveGUI-1.0.3_fix116-x86_64.AppImage 
+  cd ~/Desktop/BOOKS/
+   dpkg -i ./*deb
+  pip3 install python3-psutil
+  conedc
+  condec
+  pip3 install python3-psutil
+  pip3 install python3-psutil --break-system-packages
+   apt install python3-psutil
+   dpkg -i ./*deb
+  work_loc 
+  ls
+  cd 11_Diarization/AUDIO_ANALYSIS_DASHBOARD-FLAVOUR-1/
+  ls
+  g INSTALL.csh 
+  source INSTALL.csh 
+  g INSTALL.csh 
+  source INSTALL.csh 
+  condec
+  cd ..
+  ls
+  cd FACEBOOK/
+  ls
+  cd ..
+  rm -rf FACEBOOK 
+  cd HUB_HF/
+  ls
+  cd ..
+  rm -rf HUB_HF 
+  ls
+  cd ..
+  ls
+  cd 6_ASR/
+  ls
+  cd FB_CODE/
+  ls
+  g INSTALL.csh 
+  source INSTALL.csh 
+  g INSTALL.csh 
+  g ~/.bashrc 
+  pip3 install --break-system-packages torchaudio
+  p SCRIPT_WORKING.py_GOOD
+  g INSTALL.csh 
+  pip3 install --break-system-packages transformers
+  p SCRIPT_WORKING.py_GOOD
+  g INSTALL.csh 
+  pip3 install --break-system-packages sentencepiece
+  p SCRIPT_WORKING.py_GOOD
+  condec
+  condec
+  work_loc 
+  cd 6_ASR/
+  ls
+  cd FB_MMS_1B_PIPELINE/
+  ls
+  g INSTALL.csh 
+  conda create -y -n fb_mms_1b_asr_pipeline
+  conda activate fb_mms_1b_asr_pipeline
+  conda install pytorch-cpu torchvision-cpu -c pytorch
+  pip3 install https://download.pytorch.org/whl/cpu/torch-1.0.1-cp36-cp36m-win_amd64.whl
+  pip3 install torchaudio
+  pip3 install transformers
+  condec
+  ls
+  cd ..
+  ls
+  cd seamless-m4t-colab-main/
+  ls
+  cd ..
+  ls
+  cd ..
+  ls
+  cd 7_MT/
+  ls
+  cd IndicTrans2/
+  ls *csh
+  g ITRANS2_INSTALLATION.csh 
+  g ~/.bashrc 
+  source ITRANS2_INSTALLATION.csh 
+  g ITRANS2_INSTALLATION.csh 
+  python3  FROM_WEBSITE.py
+  g FROM_WEBSITE.py 
+  cd ..
+  ls
+  cd ..
+  ls
+  cd TO_DEL_PUNCHUATION/
+  condec
+  ls
+  cd PUNCHATION_MODELS/
+  ls
+  g INSTALL.csh 
+  conda create -y -n deepmultilingualpunctuation
+  conda activate deepmultilingualpunctuation
+  pip3 install deepmultilingualpunctuation
+  pip3 install --break-system-packages deepmultilingualpunctuation
+  p RUN.py 
+  condec
+  cd ~
+  ls
+  condec
+  work_loc 
+  ls
+  cd 6_ASR/
+  ls
+  cd OPEN_WHISPHER_GIT/
+  ls
+  d whisper/
+  dd whisper/
+  cd whisper/
+  ls
+  open_permissions 
+  source INSTALL.csh 
+  g INSTALL.csh 
+  g ~/.bashrc 
+  source INSTALL.csh 
+  g INSTALL.csh 
+  conda activate OPEN_WHISPHER_GIT_ASR
+  source INSTALL.csh 
+  condec 
+  cd ~/Downloads/
+  g CUDA_INSTALL.csh
+  source CUDA_INSTALL.csh
+  cd ~/.cache/
+  ls
+  rm -rf whisper 
+  rm -rf huggingface 
+  du -sh . 
+  ls
+  cd ..
+  du -sh .cache 
+  cd ~/Desktop/BOOKS/
+  ls
+   dpkg -i ./cudnn-local-repo-ubuntu2204-9.0.0_1.0-1_amd64.deb 
+  du -sh . 
+  cd ~
+  du -sh . 
+  g ~/.bashrc 
+  condec
+  work_loc 
+  ls
+  cd 6_ASR/FB_MMS_1B_PIPELINE/
+  ls
+  pwd
+  ls
+  cd ..
+  ls
+  cd OPEN_WHISPHER_GIT/
+  ls
+  cd whisper/
+  ls
+  g INSTALL.csh 
+  source INSTALL.csh 
+  du -sh ~/.
+  conda activate OPEN_WHISPHER_GIT_ASR
+  g INSTALL.csh 
+  whisper  audio.mp3  --model large-v3 --language kn
+  pwd
+  find_space 
+  g ~/.bashrc 
+  condec
+  du -sh .
+  work_loc 
+  ls
+  cd 6_ASR/
+  cd FB_CODE/
+  ls
+  g INSTALL.csh 
+  source INSTALL.csh 
+  p SCRIPT_WORKING.py_GOOD 
+  g SCRIPT_WORKING.py
+  ls
+  g SCRIPT_WORKING.py
+  pwd
+  condec
+  condec
+  work_loc 
+  ls
+  cd TO_DEL_PUNCHUATION/
+  ls
+  cd PUNCHATION_MODELS/
+  ls
+  g INSTALL.csh 
+  source  INSTALL.csh 
+  ls
+  g RUN.py 
+  p RUN.py 
+  condec
+  cd ..
+  mv TO_DEL_PUNCHUATION 15_PUNCHUATION/
+  cd 15_PUNCHUATION/PUNCHATION_MODELS/
+  pwd
+  cd ..
+  cd 7_MT/IndicTrans2/
+  pwd
+  mv ITRANS2_INSTALLATION.csh INSTALL.csh
+  source INSTALL.csh 
+  sl
+  ls
+  rm -rf cuda_12.3.2_545.23.08_linux.run
+  p INSTALL.csh 
+  g INDIC_EN_DEPLOY_FAIR_SEQ.py 
+  p INDIC_EN_DEPLOY_FAIR_SEQ.py 
+  pip3 install fairseq
+  g FROM_WEBSITE.py 
+  p FROM_WEBSITE.py 
+  cd /mnt/c73295e4-1b6e-465c-bdc0-4fc511e5ae7b/KAGAPA/6_ASR/OPEN_WHISPHER_GIT/whisper
+  condec
+  con_remove OPEN_WHISPHER_GIT
+  conda_envs_list 
+  con_remove OPEN_WHISPHER_GIT_ASR
+  source INSTALL.csh 
+  g INSTALL.csh 
+  whisper  audio.mp3  --model large-v3 --language kn 
+  work_loc 
+  condec 
+  cd 6_ASR/OPEN_WHISPHER_GIT/
+  pwd
+  cd ..
+  cd ~
+  cd ~/Downloads/
+  g CUDA_INSTALL.csh 
+   apt-get install -y cuda-drivers
+   apt-get install -y nvidia-kernel-open-545
+   apt-get install -y cuda-drivers-545
+  wget https://developer.download.nvidia.com/compute/cudnn/9.0.0/local_installers/cudnn-local-repo-ubuntu2204-9.0.0_1.0-1_amd64.deb
+   dpkg -i cudnn-local-repo-ubuntu2204-9.0.0_1.0-1_amd64.deb
+   cp /var/cudnn-local-repo-ubuntu2204-9.0.0/cudnn-*-keyring.gpg /usr/share/keyrings/
+   apt-get update
+   apt-get -y install cudnn
+   dpkg -i ~/Desktop/BOOKS/*deb
+  wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-9.0.0.312_cuda12-archive.tar.xz
+   apt install nvidia-cuda-toolkit
+   tar -xJf cudnn-linux-*.xz
+  cd cud*rchive/
+   \cp -rf ./include/cudnn*.h /usr/local/cuda/include/.
+   \cp -rf ./lib/libcudnn* /usr/local/cuda/lib64/.
+   chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+  export PATH="$PATH:/usr/local/cuda/include/"
+  export PATH="$PATH:/usr/local/cuda/lib64/"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64/"
+   \cp -rf ./include/cudnn*.h /usr/local/cuda/include/.
+   \cp -rf ./lib/libcudnn* /usr/local/cuda/lib64/.
+   chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+  export PATH="$PATH:/usr/local/cuda/include/"
+  export PATH="$PATH:/usr/local/cuda/lib64/"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64/"
+  ls
+   \cp -rf ./lib/libcudnn* /usr/local/cuda/lib64/.
+   apt install nvidia-cuda-toolkit
+  mkdir /usr/local/cuda/include
+   mkdir /usr/local/cuda/include
+   mkdir /usr/local/cuda/lib64/
+   \cp -rf ./include/cudnn*.h /usr/local/cuda/include/.
+   \cp -rf ./lib/libcudnn* /usr/local/cuda/lib64/.
+   chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+  export PATH="$PATH:/usr/local/cuda/include/"
+  export PATH="$PATH:/usr/local/cuda/lib64/"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64/"
+  g ~/.bashrc 
+  condec
+  work_loc 
+  ls
+  cd 11_Diarization/
+  s
+  ls
+  cd AUDIO_ANALYSIS_DASHBOARD-FLAVOUR-2/
+  ls
+  g INSTALL.csh 
+  con_remove vad_pyannotate
+  source INSTALL.csh 
+  g INSTALL.csh 
+  \rm -rf pyannote-audio
+  git clone --recur https://github.com/pyannote/pyannote-audio.git
+   chmod a+rwx * -R
+  cd pyannote-audio
+  python3 setup.py install
+  pip3 install   --break-system-packages -r ./requirements.txt
+  pip3 install   --break-system-packages pyannote.audio
+  cd ..
+  pip3 install   --break-system-packages pytorch_lightning
+  pip3 install   --break-system-packages flask 
+  pip3 install   --break-system-packages Ipython
+  pip3 install   --break-system-packages pandas
+  g INSTALL.csh 
+  python3 setup.py install
+  cd pyannote-audio/
+  python3 setup.py install
+  conda install -y pytorch-cpu torchvision-cpu -c pytorch
+  pip3 install   --break-system-packages https://download.pytorch.org/whl/cpu/torch-1.0.1-cp36-cp36m-win_amd64.whl
+  pip3 install   --break-system-packages torchvision
+  pip3 install   --break-system-packages torchaudio
+  python3 setup.py install
+  pip3 install torchaudio  --break-system-packages
+  pip3 install torchaudio  --break-system-pack
+  pip3 install torchaudio  --b
+  pip3 install   --break-system-packages torchaudio
+  pip3 install torchaudio
+  python3 setup.py install
+  pip3 install torchaudio
+  ks
+  ls
+  python3 setup.py install
+  condec
+  work_loc 
+  ls
+  cd 9_DENOISING/
+  ls
+  rm -rf cudnn-local-repo-ubuntu2204-9.0.0_1.0-1_amd64.deb 
+  ls
+  cd FullSubNet-main/
+  ls
+  cd FullSubNet-main/
+  ls
+  g INSTALL.csh 
+  source INSTALL.csh 
+  g INSTALL.csh 
+  ls
+  g BLOGS-EASY_INSTALL.txt 
+  g INSTALL.csh 
+  ls
+  g BLOGS-EASY_INSTALL.txt 
+  condec
+  work_loc 
+  ls
+  cd 14_PUNCHUATION/
+  ls
+  g INSTALL.csh 
+  source INSTALL.csh 
+  g INSTALL.csh 
+  pip3 install --break-system-packages punctuators
+  p punctuation.py
+  condec
+  cd ..
+  ksl
+  ls
+  cd 11_Diarization/
+  ls
+  cd AUDIO_ANALYSIS_DASHBOARD-FLAVOUR-2/
+  ls
+  g INSTALL.csh 
+  source INSTALL.csh 
+  g INSTALL.csh 
+  source INSTALL.csh 
+  p DASHBOARD-FLAVOUR-2.py 
+  g INSTALL.csh 
+  cd pyannote-audio/
+   chmod a+rwx * -R
+  cd ..
+   chmod a+rwx * -R
+  cd -
+  python3 setup.py install
+  pip3 install    -r ./requirements.txt
+  pip3 install    pyannote.audio
+  python3 setup.py install
+  pip3 install    pytorch_lightning
+  pip3 install    flask 
+  pip3 install    Ipython
+  pip3 install    pandas
+  python3 setup.py install
+  pip3 install    torchvision
+  pip3 install    torchaudio
+  conda install -y pytorch-cpu torchvision-cpu -c pytorch
+  pip3 install https://download.pytorch.org/whl/cpu-cxx11-abi/torch-2.0.0%2Bcpu.cxx11.abi-cp310-cp310-linux_x86_64.whl
+  wget https://download.pytorch.org/whl/cpu-cxx11-abi/torch-2.0.0%2Bcpu.cxx11.abi-cp310-cp310-linux_x86_64.whl
+  pip3 install https://download.pytorch.org/whl/cpu-cxx11-abi/torch-2.0.0%2Bcpu.cxx11.abi-cp311-cp311-linux_x86_64.whl#sha256=58fd180f97c9dc36e8f42c7590693c4d5be0825b4c9cd1f65ad1fbee83781a9d
+  pip3.11 install https://download.pytorch.org/whl/cpu-cxx11-abi/torch-2.0.0%2Bcpu.cxx11.abi-cp311-cp311-linux_x86_64.whl#sha256=58fd180f97c9dc36e8f42c7590693c4d5be0825b4c9cd1f65ad1fbee83781a9d
+  python3 -m venv path/to/venv
+  python3 -m venv Diarization_DASHBOARD-FLAVOUR-2
+  condec
+  spurce ./Diarization_DASHBOARD-FLAVOUR-2/bin/activate
+  source ./Diarization_DASHBOARD-FLAVOUR-2/bin/activate
+  pip3 install    torchvision
+  pip3 install    torchaudio
+  python3 -m pip install --upgrade pip
+   chmod a+rwx * -R
+  python3 setup.py install
+  python3.11 setup.py install
+  pip3.11 install    -r ./requirements.txt
+  pip3.11 install    pyannote.audio
+  python3.11 setup.py install
+  pip3.11 install    pytorch_lightning
+  pip3.11 install    flask 
+  pip3.11 install    Ipython
+  pip3.11 install    pandas
+  ls
+  pip3 install . 
+  ls
+  cd ..
+  ls
+  p DASHBOARD-FLAVOUR-2.py 
+  pip3 insall pandas
+  pip3 install pandas
+  p DASHBOARD-FLAVOUR-2.py 
+  ls
+  g INSTALL.csh 
+  pip3 install einops
+  p DASHBOARD-FLAVOUR-2.py 
+  pip3 install pyannote
+  pip3 install pyannote.core
+  p DASHBOARD-FLAVOUR-2.py 
+  pip3 install pyannote.audio
+  p DASHBOARD-FLAVOUR-2.py 
+  python3.11 DASHBOARD-FLAVOUR-2.py 
+  pip3.11 install pyannote.audio
+  pip3.11 install pyannote.audio --break-system-packages
+  python3.11 DASHBOARD-FLAVOUR-2.py 
+  cd WORKING_FILES/INTERMITTENT_CUT_AUDIOS/
+  ls
+  cd ..
+  ls
+  cd ..
+  ls
+  cd WORKING_FILES/INTERMITTENT_CUT_AUDIOS/
+  ls
+  cd ..
+  ls
+  cd INTERMITTENT_CSVS_WITH_AUDIO_CUT_TIME/
+  ls
+  cd ..
+  ls
+  condec
+  ./OneDriveGUI-1.0.3_fix116-x86_64.AppImage 
+  condec
+  ls
+  cd venv/
+  ls
+  cd ..
+  ls
+  g ~/.bashrc 
+  g ~/.bashrc 
+  condec
+  work_loc 
+  cd 14_PUNCHUATION/
+  ls
+  g INSTALL.csh 
+  g punctuation.py
+  cd ..
+  cd 6_ASR/OPEN_WHISPHER_GIT/
+  ls
+  open_permissions 
+  cd whisper/
+  ls
+  g INSTALL.csh 
+  con_remove  OPEN_WHISPHER_GIT_ASR
+  source INSTALL.csh 
+  condec
+  con_remove OPEN_WHISPHER_GIT_ASR
+  ls
+  g INSTALL.csh 
+  condec
+  work_loc 
+  ls
+  cd 7_MT/
+  ls
+  cd IndicTrans2/
+  ls
+  g INSTALL.csh 
+  source INSTALL.csh 
+  g INSTALL.csh 
+  con_remove itv2
+  condec
+  con_remove itv2
+  source INSTALL.csh 
+  g install.sh 
+  g INSTALL.csh 
+  python3.11  FROM_WEBSITE.py
+  g FROM_WEBSITE.py 
+  python3.11  FROM_WEBSITE.py
+  g install.sh 
+  condec
+  bash ./install.sh 
+  g install.sh 
+  con_remove itv2
+  bash ./install.sh 
+  ls
+  g INSTALL.csh 
+  pip3.9 install   torch
+  pip3.9 install   numba
+  pip3.9 install   pynvml
+  pip3.9 install   koila
+  pip3.9 install   nltk sacremoses regex pandas mock transformers==4.28.1 sacrebleu==2.3.1  mosestokenizer ctranslate2==3.9.0 gradio
+  source install.sh 
+  pip3.9 install    nltk
+  pip3.9 install   nltk
+  pip3.9 install   torch
+  pip3.9 install   sacremoses
+  pip3.9 install   numba
+  pip3.9 install   pynvml
+  pip3.9 install   koila
+  cpip3 install   torch
+  pip3 install   numba
+  pip3 install   pynvml
+  pip3 install   koila
+  pip3 install   nltk sacremoses regex pandas mock transformers==4.28.1 sacrebleu==2.3.1  mosestokenizer ctranslate2==3.9.0 gradio
+  source install.sh 
+  pip3 install    nltk
+  pip3 install   nltk
+  pip3 install   torch
+  pip3 install   sacremoses
+  pip3 install   numba
+  pip3 install   pynvml
+  pip3 install   koila
+  pip3 install   tensorboardX 
+  export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+  python3.11  FROM_WEBSITE.py
+  python3.9  FROM_WEBSITE.py
+  con_remove itv2
+  condec
+  con_remove itv2
+  cd ~
+  ls
+  cd ~/Downloads/
+  g CUDA_INSTALL.csh 
+   apt-get update
+   apt-get install -y libnvidia-compute-545:i386 libnvidia-decode-545:i386  libnvidia-encode-545:i386 libnvidia-extra-545:i386 libnvidia-fbc1-545:i386  libnvidia-gl-545:i386
+  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb
+   dpkg -i cuda-keyring_1.1-1_all.deb
+   apt-get update
+   apt-get -y install cuda-toolkit-12-3
+   dpkg --add-architecture i386
+   apt-get update
+   apt-get install libnvidia-compute-545:i386 libnvidia-decode-545:i386  libnvidia-encode-545:i386 libnvidia-extra-545:i386 libnvidia-fbc1-545:i386  libnvidia-gl-545:i386
+   apt-get install -y libnvidia-compute-545:i386
+   apt-get install -y cuda-drivers
+   apt-get install -y nvidia-kernel-open-545
+   apt-get install -y cuda-drivers-545
+   apt-get install -y libnvidia-compute-545:i386 libnvidia-decode-545:i386  libnvidia-encode-545:i386 libnvidia-extra-545:i386 libnvidia-fbc1-545:i386  libnvidia-gl-545:i386
+   zypper install -y cuda-toolkit
+   apt-get install -y linux-headers-$(uname -r)
+   apt-key del 7fa2af80
+   dpkg -i cuda-keyring_1.1-1_all.deb
+   apt-get update
+   apt-get install -y cuda-toolkit
+   apt-get install -y nvidia-gds
+   apt update -y 
+   apt upgrade -y 
+   apt remove
+  wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-9.0.0.312_cuda12-archive.tar.xz
+   apt install nvidia-cuda-toolkit
+   tar -xJf cudnn-linux-*.xz
+  cd cud*rchive/
+   \cp -rf ./include/cudnn*.h /usr/local/cuda/include/.
+   \cp -rf ./lib/libcudnn* /usr/local/cuda/lib64/.
+   chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+  export PATH="$PATH:/usr/local/cuda/include/"
+  export PATH="$PATH:/usr/local/cuda/lib64/"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64/"
+  work_loc 
+  cd 11_Diarization/AUDIO_ANALYSIS_DASHBOARD-FLAVOUR-1/
+  pwd
+  cd ..
+  cd AUDIO_ANALYSIS_DASHBOARD-FLAVOUR-2/
+  ls
+  pwd
+  condec
+  cd ,,
+  cd ..
+  ls
+  cd ..
+  ls
+  cd -
+  ls
+  liber writer ./DASHBOARD.docx 
+  liber writer ./DASHBOARD.docx  & 
+  ls
+  cd AUDIO_ANALYSIS_DASHBOARD-FLAVOUR-2/
+  ls
+  rm -rf pyannote-audio 
+  git clone --recur https://github.com/pyannote/pyannote-audio.git
+   chmod a+rwx * -R
+  cd yannote-audio
+  python setup.py install
+  pip install -r ./requirements.txt
+  pip install pyannote.audio
+  python run.py
+  open_permissions 
+  cd pyannote-audio/
+  python setup.py install
+  conda_envs_list 
+  conda activate Diarization_DASHBOARD-FLAVOUR-2
+  python setup.py install
+  pip install -r ./requirements.txt
+  pip install pyannote.audio
+  python run.py
+  cd ..
+  ls
+  python DASHBOARD-FLAVOUR-2.py 
+  g DASHBOARD-FLAVOUR-2.py 
+  condec 
+  ls
+  cd ~/Desktop/BOOKS/
+   dpkg -i *musl
+  work_loc 
+  ls
+  cd 9_DENOISING/DENOISER_DNS_64/
+  pwd
+  s
+  ls
+  cd ..
+  ls
+  cd docker-facebook-demucs/
+  ls
+  g USAGE.txt 
+   make run track=alex_noisy.mp3
+  cd ..
+  mkdir DEMUCS
+  cd DEMUCS/
+  conda create -y -n DEMUCS_DENOISER
+  conda activate DEMUCS_DENOISER
+  g INSTALL.csh
+  history 
+  pip3 install -U demucs
+  pip3 install -U demucs --break-system-packages
+  cp -rf ../../6_ASR/whisper.cpp/samples/test.mp3 .
+  demucs test.mp3 
+  ls
+  cd separated/
+  ls
+  cd htdemucs/
+  ls
+  cd test/
+  ls
+  du -sh * 
+  cd ..
+  ls
+  g INSTALL.csh 
+  cd ..
+  rm -rf docker-facebook-demucs 
+  cd -
+  pwd
+  condec
+  ls
+  cd ..
+  ls
+  cd 14_PUNCHUATION/
+  ls
+  cd ..
+  ls
+  cd 5_SCRIPTWARE/AI4BHARAT_TTS_ON_EACH_ROW_BAD_NOT_WORKING/
+  ls
+  g INSTALL.csh 
+  source INSTALL.csh 
+  g INSTALL.csh 
+  g ./2_SENTENCE_TO_TTS.py 
+  g temp_script.sh 
+  cd 27FEB/
+  ls
+  cd ..
+  pip3 install TTS
+  g temp_script.sh 
+  export data="ನೋಡಿ ಗುರುಗುಳ ನೋಡಿಲ್ಲವಾ ನಿನೋದು?"
+  export name_of_wav="./27FEB/8.wav"
+  python3 -m TTS.bin.synthesize --model_path ./models/v1/kn/fastpitch/best_model.pth --config_path ./models/v1/kn/fastpitch/config.json --vocoder_path ./models/v1/kn/hifigan/best_model.pth --vocoder_config_path ./models/v1/kn/hifigan/config.json --speaker_idx female --use_cuda 1 --out_path "$name_of_wav"  --text "$data"
+  export CUDA_VISIBLE_DEVICES=0
+  python3 -m TTS.bin.synthesize --model_path ./models/v1/kn/fastpitch/best_model.pth --config_path ./models/v1/kn/fastpitch/config.json --vocoder_path ./models/v1/kn/hifigan/best_model.pth --vocoder_config_path ./models/v1/kn/hifigan/config.json --speaker_idx female --use_cuda 1 --out_path "$name_of_wav"  --text "$data"
+  export CUDA_VISIBLE_DEVICES=0
+  python3 -m TTS.bin.synthesize --model_path ./models/v1/kn/fastpitch/best_model.pth --config_path ./models/v1/kn/fastpitch/config.json --vocoder_path ./models/v1/kn/hifigan/best_model.pth --vocoder_config_path ./models/v1/kn/hifigan/config.json --speaker_idx female --use_cuda 1 --out_path "$name_of_wav"  --text "$data"
+  python3 -m TTS.bin.synthesize --model_path ./models/v1/kn/fastpitch/best_model.pth --config_path ./models/v1/kn/fastpitch/config.json --vocoder_path ./models/v1/kn/hifigan/best_model.pth --vocoder_config_path ./models/v1/kn/hifigan/config.json --speaker_idx female  --out_path "$name_of_wav"  --text "$data"
+  export CUDA_VISIBLE_DEVICES=1
+  python3 -m TTS.bin.synthesize --model_path ./models/v1/kn/fastpitch/best_model.pth --config_path ./models/v1/kn/fastpitch/config.json --vocoder_path ./models/v1/kn/hifigan/best_model.pth --vocoder_config_path ./models/v1/kn/hifigan/config.json --speaker_idx female --use_cuda 1 --out_path "$name_of_wav"  --text "$data"
+   apt-get update
+   apt-get install -y libnvidia-compute-545:i386 libnvidia-decode-545:i386  libnvidia-encode-545:i386 libnvidia-extra-545:i386 libnvidia-fbc1-545:i386  libnvidia-gl-545:i386
+  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb
+   dpkg -i cuda-keyring_1.1-1_all.deb
+   apt-get update
+   apt-get -y install cuda-toolkit-12-3
+   dpkg --add-architecture i386
+   apt-get update
+   apt-get install libnvidia-compute-545:i386 libnvidia-decode-545:i386  libnvidia-encode-545:i386 libnvidia-extra-545:i386 libnvidia-fbc1-545:i386  libnvidia-gl-545:i386
+   apt-get install -y libnvidia-compute-545:i386
+   apt-get install -y cuda-drivers
+   apt-get install -y nvidia-kernel-open-545
+   apt-get install -y cuda-drivers-545
+   apt-get install -y libnvidia-compute-545:i386 libnvidia-decode-545:i386  libnvidia-encode-545:i386 libnvidia-extra-545:i386 libnvidia-fbc1-545:i386  libnvidia-gl-545:i386
+   zypper install -y cuda-toolkit
+   apt-get install -y linux-headers-$(uname -r)
+   apt-key del 7fa2af80
+   dpkg -i cuda-keyring_1.1-1_all.deb
+   apt-get update
+   apt-get install -y cuda-toolkit
+   apt-get install -y nvidia-gds
+   apt-get update
+   apt-get install -y libnvidia-compute-545:i386 libnvidia-decode-545:i386  libnvidia-encode-545:i386 libnvidia-extra-545:i386 libnvidia-fbc1-545:i386  libnvidia-gl-545:i386
+  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb
+   dpkg -i cuda-keyring_1.1-1_all.deb
+   apt-get update
+   apt-get -y install cuda-toolkit-12-3
+   dpkg --add-architecture i386
+   apt-get update
+   apt-get install libnvidia-compute-545:i386 libnvidia-decode-545:i386  libnvidia-encode-545:i386 libnvidia-extra-545:i386 libnvidia-fbc1-545:i386  libnvidia-gl-545:i386
+   apt-get install -y libnvidia-compute-545:i386
+   apt-get install -y cuda-drivers
+   apt-get install -y nvidia-kernel-open-545
+   apt-get install -y cuda-drivers-545
+   apt-get install -y libnvidia-compute-545:i386 libnvidia-decode-545:i386  libnvidia-encode-545:i386 libnvidia-extra-545:i386 libnvidia-fbc1-545:i386  libnvidia-gl-545:i386
+   zypper install -y cuda-toolkit
+   apt-get install -y linux-headers-$(uname -r)
+   apt-key del 7fa2af80
+   dpkg -i cuda-keyring_1.1-1_all.deb
+   apt-get update
+   apt-get install -y cuda-toolkit
+   apt-get install -y nvidia-gds
+  python3 -m TTS.bin.synthesize --model_path ./models/v1/kn/fastpitch/best_model.pth --config_path ./models/v1/kn/fastpitch/config.json --vocoder_path ./models/v1/kn/hifigan/best_model.pth --vocoder_config_path ./models/v1/kn/hifigan/config.json --speaker_idx female --use_cuda 1 --out_path "$name_of_wav"  --text "$data"
+  nvidia-smi
+   apt install nvidia-utils-545
+   apt update -y
+  nvidia-smi
+   apt install nvidia-utils-545
+  g INSTALL.csh 
+  g ./2_SENTENCE_TO_TTS.py 
+  python3 ./2_SENTENCE_TO_TTS.py
+  history 
+  history > HISTORY_WORKING
