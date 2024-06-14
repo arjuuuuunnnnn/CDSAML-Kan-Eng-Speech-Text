@@ -12,6 +12,11 @@ import subprocess
 import os
 import shutil
 from io import StringIO
+from dotenv import load_dotenv
+
+load_dotenv()
+access_token = os.getenv("HF_ACCESS_TOKEN")
+
 
 def run_pyannote_seg_3(input_file, output_csv):
     import torch
@@ -19,7 +24,7 @@ def run_pyannote_seg_3(input_file, output_csv):
     # Load the pre-trained pipeline
     pipeline = Pipeline.from_pretrained(
                     "pyannote/speaker-diarization-3.1",
-                    use_auth_token="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"
+                    use_auth_token=access_token
                 )
 
     pipeline.to(torch.device("cuda"))
