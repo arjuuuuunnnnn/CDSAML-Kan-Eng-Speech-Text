@@ -1,3 +1,0 @@
-export data="ಅವರು ವನ್ನು ಮೂಲೆಗೆ ಸ್ಕೈಯರ್ ಒಳಗಳೆ ವನ್ನು ಕಾರ್ಣರ್ಗೆ ಕರ್ಕುಂ ಒಕ್ತರೆ"
-export name_of_wav="./27FEB/3.wav"
-python3 -m TTS.bin.synthesize --model_path ./models/v1/kn/fastpitch/best_model.pth --config_path ./models/v1/kn/fastpitch/config.json --vocoder_path ./models/v1/kn/hifigan/best_model.pth --vocoder_config_path ./models/v1/kn/hifigan/config.json --speaker_idx female  --out_path "$name_of_wav"  --text "$data"
