@@ -9,3 +9,5 @@ OUTPUT/*
 SPEECH2TEXT_DIVIDIDE-CONQURE_DASHBOARD-main/*mp4
 
 .env
+
+IndicTransTokenizer/*
