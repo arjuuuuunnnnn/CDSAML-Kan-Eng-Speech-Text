@@ -10,4 +10,5 @@ SPEECH2TEXT_DIVIDIDE-CONQURE_DASHBOARD-main/*mp4
 
 .env
 
-IndicTransTokenizer/*
+src/SpeechText/__pycache__/*
+src/SpeechText/pipeline/__pycache__/*
