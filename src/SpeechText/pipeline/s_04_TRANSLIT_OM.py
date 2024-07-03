@@ -8,7 +8,7 @@ sys.path.append(project_root)
 from src.SpeechText import logger
 
 STAGE_NAME = "Text Transliteration Stage"
-os.makedirs("../../artifacts/STAGE_03", exist_ok=True)
+os.makedirs("../../artifacts/STAGE_04", exist_ok=True)
 
 class TextTransliteration:
     def __init__(self, input_file, output_file):
@@ -67,8 +67,8 @@ class TextTransliteration:
 if __name__ == "__main__":
     try:
         logger.info(f"********** stage {STAGE_NAME} started **********")
-        input_file = "../../artifacts/STAGE_02/02_punctuation.txt"
-        output_file = "../../artifacts/STAGE_03/03_transliteration.txt"
+        input_file = "../../artifacts/STAGE_03/03_punctuation.txt"
+        output_file = "../../artifacts/STAGE_04/04_transliteration.txt"
         obj = TextTransliteration(input_file, output_file)
         obj.main()
         logger.info(f"********** stage {STAGE_NAME} completed **********")

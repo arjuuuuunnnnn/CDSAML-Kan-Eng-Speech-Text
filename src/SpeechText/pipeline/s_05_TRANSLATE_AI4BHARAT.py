@@ -15,7 +15,7 @@ sys.path.append(project_root)
 from src.SpeechText import logger
 
 STAGE_NAME = "Text Translation Stage"
-os.makedirs("../../artifacts/STAGE_04", exist_ok=True)
+os.makedirs("../../artifacts/STAGE_05", exist_ok=True)
 
 class TextTranslation:
     def __init__(self, input_file, output_file, model_name):
@@ -113,8 +113,8 @@ class TextTranslation:
 if __name__ == "__main__":
     try:
         logger.info(f"********** stage {STAGE_NAME} started **********")
-        input_file = "../../artifacts/STAGE_02/02_punctuation.txt"
-        output_file = "../../artifacts/STAGE_04/04_translation.txt"
+        input_file = "../../artifacts/STAGE_03/03_punctuation.txt"
+        output_file = "../../artifacts/STAGE_05/05_translation.txt"
         model_name = "ai4bharat/indictrans2-indic-en-1B"
 
         obj = TextTranslation(input_file, output_file, model_name)

@@ -9,7 +9,7 @@ sys.path.append(project_root)
 from src.SpeechText import logger
 
 STAGE_NAME = "Text Punctuation Stage"
-os.makedirs("../../artifacts/STAGE_02", exist_ok=True)
+os.makedirs("../../artifacts/STAGE_03", exist_ok=True)
 
 class TextPunctuation:
     def __init__(self, input_file, output_dir, model_id):
@@ -39,7 +39,7 @@ class TextPunctuation:
 
     def save_punctuation_results(self, input_texts, results):
         os.makedirs(self.output_dir, exist_ok=True)
-        output_file = os.path.join(self.output_dir, "02_punctuation.txt")
+        output_file = os.path.join(self.output_dir, "03_punctuation.txt")
         try:
             with open(output_file, "w", encoding="utf-8") as f:
                 for input_text, output_texts in zip(input_texts, results):
@@ -61,8 +61,8 @@ class TextPunctuation:
 if __name__ == "__main__":
     try:
         logger.info(f"********** stage {STAGE_NAME} started **********")
-        input_file = "../../artifacts/STAGE_01/01_transcription.txt"
-        output_dir = "../../artifacts/STAGE_02"
+        input_file = "../../artifacts/STAGE_02/02_transcription.txt"
+        output_dir = "../../artifacts/STAGE_03"
         model_id = "pcs_47lang"
 
         obj = TextPunctuation(input_file, output_dir, model_id)

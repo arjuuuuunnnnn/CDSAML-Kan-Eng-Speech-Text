@@ -1,36 +1,229 @@
-[2024-07-03 00:29:53,398: INFO: main: ********** Stage 0 Audio Denoising started **********]
-[2024-07-03 00:30:05,179: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.801931164753584]
-[2024-07-03 00:30:05,181: INFO: main: ********** Stage 0 Audio Denoising completed **********
+[2024-07-03 21:48:27,235: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-03 21:48:47,454: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-03 21:48:47,456: INFO: main: ********** Stage 0 Audio Denoising completed **********
 
 ]
-[2024-07-03 00:30:05,182: INFO: main: ********** Stage 1 Audio Transcription started **********]
-[2024-07-03 00:30:09,159: INFO: s_01_ASR_ADDY88: Original Transcription: <s>ನ<s>ನ್ನ<s> <s>ಹೆ<s>ಸ<s>ರು<s> <s>ಹ<s>ೇ<s>ಮ<s>ಂ<s>ತ್<s> <s>ನ<s>ಾ<s>ನು<s> <s>ಪಿ<s>ಎ<s>ಸ<s>್<s> <s>ವಿ<s>ಶ್<s>ವ<s>ವಿ<s>ದ್<s>ಯಾ<s>ಲ<s>ಯ<s>ದ<s>ಲ್<s>ಲಿ<s> <s>ಓ<s>ಗು<s>ತ್<s>ತಿ<s>ದ್ದ<s>ೇ<s>ನೆ<s> <s>ನ<s>ಾ<s>ನು<s> <s>ಎ<s>ರ<s>ಡ<s>ನೇ<s> <s>ವ<s>ರ್<s>ಷ<s>ದ<s> <s>ವಿ<s>ದ್<s>ಯ<s>ಾ<s>ರ್<s>ಥ<s>ಿ<s> <s>]
-[2024-07-03 00:30:09,162: INFO: s_01_ASR_ADDY88: Cleaned Transcription: ನನ್ನ ಹೆಸರು ಹೇಮಂತ್ ನಾನು ಪಿಎಸ್ ವಿಶ್ವವಿದ್ಯಾಲಯದಲ್ಲಿ ಓಗುತ್ತಿದ್ದೇನೆ ನಾನು ಎರಡನೇ ವರ್ಷದ ವಿದ್ಯಾರ್ಥಿ]
-[2024-07-03 00:30:09,162: INFO: s_01_ASR_ADDY88: Transcription saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/01_transcription.txt]
-[2024-07-03 00:30:09,162: INFO: main: ********** Stage 1 Audio Transcription completed **********
+[2024-07-03 21:48:47,457: INFO: main: ********** Stage 1 Speech Separation started **********]
+[2024-07-03 21:48:47,457: INFO: s_01_SPEECH_SEP: Processing: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3]
+[2024-07-03 21:48:50,466: WARNING: train_logger: torchvision is not available - cannot save figures]
+[2024-07-03 21:48:59,894: INFO: s_01_SPEECH_SEP: Speaker SPEAKER_00: 1.6 - 11.6]
+[2024-07-03 21:48:59,894: INFO: s_01_SPEECH_SEP: Diarization results written to /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/CSV/Cleaned_denoiser_facebook_1_input.mp3_diarization.csv]
+[2024-07-03 21:48:59,894: INFO: s_01_SPEECH_SEP: Total number of speakers detected: 1]
+[2024-07-03 21:48:59,894: INFO: s_01_SPEECH_SEP: CSV Header: ['speaker', 'start_time', 'stop_time']]
+[2024-07-03 21:48:59,894: INFO: s_01_SPEECH_SEP: CSV Row 0: ['speaker_SPEAKER_00', '1.6', '11.6']]
+[2024-07-03 21:48:59,894: INFO: s_01_SPEECH_SEP: Running command: ffmpeg -y -i /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3 -ss 1.6 -to 11.6 -c:a libmp3lame -q:a 0 -vn /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/Cleaned_denoiser_facebook_1_input/speaker_SPEAKER_00_0.mp3]
+[2024-07-03 21:49:00,028: INFO: s_01_SPEECH_SEP: Processed Cleaned_denoiser_facebook_1_input.mp3. Output in /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/Cleaned_denoiser_facebook_1_input]
+[2024-07-03 21:49:00,029: INFO: main: ********** Stage 1 Speech Separation completed **********
 
 ]
-[2024-07-03 00:30:09,162: INFO: main: ********** Stage 2 Text Punctuation started **********]
-[2024-07-03 00:30:10,719: INFO: s_02_PUNCT_PCS47LANG: Punctuation results saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_02/02_punctuation.txt]
-[2024-07-03 00:30:10,719: INFO: main: ********** Stage 2 Text Punctuation completed **********
+[2024-07-03 21:49:00,029: INFO: main: ********** Stage 2 Audio Transcription started **********]
+[2024-07-03 21:49:06,504: INFO: s_02_ASR_ADDY88: Original Transcription: <s>ನ<s>ಾ<s>ನು<s> <s>ಹೆ<s>ಸ<s>ರು<s> <s>ಸ<s>ಮ<s>ೃ<s>ದ್<s> <s>ನ<s>ನ<s>ಗೆ<s> <s>ನ<s>ಾ<s>ಯಿ<s> <s>ಹ<s>ಸು<s> <s>ಮ<s>ತ್<s>ತು<s> <s>ಬೆ<s>ಕ್<s>ಕು<s> <s>ಇ<s>ಷ<s>್<s>ಟ<s> <s>ನಿ<s>ನ್<s>ನ<s>ಗೆ<s> <s>ಹೆ<s>ಸ<s>ರ<s>ೇ<s>ನು<s> <s>ನ<s>ಾ<s>ನ<s>ು<s> <s>ಪಿ<s>ಎ<s>ಸ<s>್<s> <s>ವಿ<s>ಶ್<s>ವ<s>ವ<s>ಿ<s>ದ್<s>ಯ<s>ವಿ<s>ದ್<s>ಯ<s>ಾ<s>ಲ<s>ಯ<s>ದ<s>ಲ್<s>ಲಿ<s> <s>ಓ<s>ದ<s>ು<s>ತ್<s>ತ<s>ಿ<s>ದ್ದ<s>ೇ<s>ನೆ<s> <s>]
+[2024-07-03 21:49:06,505: INFO: s_02_ASR_ADDY88: Cleaned Transcription: ನಾನು ಹೆಸರು ಸಮೃದ್ ನನಗೆ ನಾಯಿ ಹಸು ಮತ್ತು ಬೆಕ್ಕು ಇಷ್ಟ ನಿನ್ನಗೆ ಹೆಸರೇನು ನಾನು ಪಿಎಸ್ ವಿಶ್ವವಿದ್ಯವಿದ್ಯಾಲಯದಲ್ಲಿ ಓದುತ್ತಿದ್ದೇನೆ]
+[2024-07-03 21:49:06,505: INFO: s_02_ASR_ADDY88: Transcription saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_02/02_transcription.txt]
+[2024-07-03 21:49:06,505: INFO: main: ********** Stage 2 Audio Transcription completed **********
 
 ]
-[2024-07-03 00:30:10,720: INFO: main: ********** Stage 3 Transliteration started **********]
-[2024-07-03 00:30:10,720: INFO: s_03_TRANSLIT_OM: Transliterated text saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_03/03_transliteration.txt]
-[2024-07-03 00:30:10,720: INFO: main: ********** Stage 3 Transliteration completed **********
+[2024-07-03 21:49:06,505: INFO: main: ********** Stage 3 Text Punctuation started **********]
+[2024-07-03 21:49:09,495: INFO: s_03_PUNCT_PCS47LANG: Punctuation results saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_03/03_punctuation.txt]
+[2024-07-03 21:49:09,495: INFO: main: ********** Stage 3 Text Punctuation completed **********
 
 ]
-[2024-07-03 00:30:10,720: INFO: main: ********** Stage 4 Translation started **********]
-[2024-07-03 00:30:27,553: INFO: s_04_TRANSLATE_AI4BHARAT: Translations saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_04/04_translation.txt]
-[2024-07-03 00:30:27,553: INFO: main: ********** Stage 4 Translation completed **********
+[2024-07-03 21:49:09,495: INFO: main: ********** Stage 4 Transliteration started **********]
+[2024-07-03 21:49:09,495: INFO: s_04_TRANSLIT_OM: Transliterated text saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_04/04_transliteration.txt]
+[2024-07-03 21:49:09,495: INFO: main: ********** Stage 4 Transliteration completed **********
 
 ]
-[2024-07-03 00:30:27,553: INFO: main: ********** English Grammar Correction Stage started **********]
-[2024-07-03 00:30:31,664: INFO: s_05_ENG_GRAMMAR_VENNIFY: Corrected text saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_05/05_english_grammar.txt]
-[2024-07-03 00:30:31,664: INFO: s_05_ENG_GRAMMAR_VENNIFY: Original: My name is Hemant, I am studying in PS University, I am a second year student.
-Output: Input: My name is Hemant I am studying in PS University and I am a second year student.
-Output: My name is Hemant, I am studying in PS University, I am a second year student.]
-[2024-07-03 00:30:31,664: INFO: s_05_ENG_GRAMMAR_VENNIFY: Corrected: My name is Hemant, I am studying in PS University and I am a second year student.]
-[2024-07-03 00:30:31,664: INFO: main: ********** English Grammar Correction Stage completed **********
+[2024-07-03 21:49:09,495: INFO: main: ********** Stage 5 Translation started **********]
+[2024-07-03 21:49:33,615: INFO: s_05_TRANSLATE_AI4BHARAT: Translations saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_05/05_translation.txt]
+[2024-07-03 21:49:33,616: INFO: main: ********** Stage 5 Translation completed **********
+
+]
+[2024-07-03 21:49:33,616: INFO: main: ********** Stage 6 English Grammar Correction started **********]
+[2024-07-03 21:49:40,921: INFO: s_06_ENG_GRAMMAR_VENNIFY: Corrected text saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_06/06_english_grammar.txt]
+[2024-07-03 21:49:40,924: INFO: s_06_ENG_GRAMMAR_VENNIFY: Original: My name is Hemanth, I am studying in TS University, I am a second year student.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.]
+[2024-07-03 21:49:40,924: INFO: s_06_ENG_GRAMMAR_VENNIFY: Corrected: Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.]
+[2024-07-03 21:49:40,924: INFO: main: ********** Stage 6 English Grammar Correction completed **********
+
+]
+[2024-07-03 22:17:11,704: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-03 22:17:30,698: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-03 22:17:30,701: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-03 22:17:30,701: INFO: main: ********** Stage 1 Speech Separation started **********]
+[2024-07-03 22:17:30,701: INFO: s_01_SPEECH_SEP: Processing: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3]
+[2024-07-03 22:17:33,692: WARNING: train_logger: torchvision is not available - cannot save figures]
+[2024-07-03 22:17:42,738: INFO: s_01_SPEECH_SEP: Speaker SPEAKER_00: 1.6 - 11.6]
+[2024-07-03 22:17:42,738: INFO: s_01_SPEECH_SEP: Diarization results written to /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/CSV/Cleaned_denoiser_facebook_1_input.mp3_diarization.csv]
+[2024-07-03 22:17:42,738: INFO: s_01_SPEECH_SEP: Total number of speakers detected: 1]
+[2024-07-03 22:17:42,739: INFO: s_01_SPEECH_SEP: CSV Header: ['speaker', 'start_time', 'stop_time']]
+[2024-07-03 22:17:42,739: INFO: s_01_SPEECH_SEP: CSV Row 0: ['speaker_SPEAKER_00', '1.6', '11.6']]
+[2024-07-03 22:17:42,739: INFO: s_01_SPEECH_SEP: Running command: ffmpeg -y -i /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3 -ss 1.6 -to 11.6 -c:a libmp3lame -q:a 0 -vn /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/Cleaned_denoiser_facebook_1_input/speaker_SPEAKER_00_0.mp3]
+[2024-07-03 22:17:42,875: INFO: s_01_SPEECH_SEP: Processed Cleaned_denoiser_facebook_1_input.mp3. Output in /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/Cleaned_denoiser_facebook_1_input]
+[2024-07-03 22:17:42,875: INFO: main: ********** Stage 1 Speech Separation completed **********
+
+]
+[2024-07-03 22:17:42,875: INFO: main: ********** Stage 2 Audio Transcription started **********]
+[2024-07-03 22:17:47,647: INFO: s_02_ASR_ADDY88: Original Transcription: <s>ನ<s>ಾ<s>ನು<s> <s>ಹೆ<s>ಸ<s>ರು<s> <s>ಸ<s>ಮ<s>ೃ<s>ದ್<s> <s>ನ<s>ನ<s>ಗೆ<s> <s>ನ<s>ಾ<s>ಯಿ<s> <s>ಹ<s>ಸು<s> <s>ಮ<s>ತ್<s>ತು<s> <s>ಬೆ<s>ಕ್<s>ಕು<s> <s>ಇ<s>ಷ<s>್<s>ಟ<s> <s>ನಿ<s>ನ್<s>ನ<s>ಗೆ<s> <s>ಹೆ<s>ಸ<s>ರ<s>ೇ<s>ನು<s> <s>ನ<s>ಾ<s>ನ<s>ು<s> <s>ಪಿ<s>ಎ<s>ಸ<s>್<s> <s>ವಿ<s>ಶ್<s>ವ<s>ವ<s>ಿ<s>ದ್<s>ಯ<s>ವಿ<s>ದ್<s>ಯ<s>ಾ<s>ಲ<s>ಯ<s>ದ<s>ಲ್<s>ಲಿ<s> <s>ಓ<s>ದ<s>ು<s>ತ್<s>ತ<s>ಿ<s>ದ್ದ<s>ೇ<s>ನೆ<s> <s>]
+[2024-07-03 22:17:47,648: INFO: s_02_ASR_ADDY88: Cleaned Transcription: ನಾನು ಹೆಸರು ಸಮೃದ್ ನನಗೆ ನಾಯಿ ಹಸು ಮತ್ತು ಬೆಕ್ಕು ಇಷ್ಟ ನಿನ್ನಗೆ ಹೆಸರೇನು ನಾನು ಪಿಎಸ್ ವಿಶ್ವವಿದ್ಯವಿದ್ಯಾಲಯದಲ್ಲಿ ಓದುತ್ತಿದ್ದೇನೆ]
+[2024-07-03 22:17:47,648: INFO: s_02_ASR_ADDY88: Transcription saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_02/02_transcription.txt]
+[2024-07-03 22:17:47,648: INFO: main: ********** Stage 2 Audio Transcription completed **********
+
+]
+[2024-07-03 22:17:47,648: INFO: main: ********** Stage 3 Text Punctuation started **********]
+[2024-07-03 22:17:49,669: INFO: s_03_PUNCT_PCS47LANG: Punctuation results saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_03/03_punctuation.txt]
+[2024-07-03 22:17:49,669: INFO: main: ********** Stage 3 Text Punctuation completed **********
+
+]
+[2024-07-03 22:17:49,669: INFO: main: ********** Stage 4 Transliteration started **********]
+[2024-07-03 22:17:49,670: INFO: s_04_TRANSLIT_OM: Transliterated text saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_04/04_transliteration.txt]
+[2024-07-03 22:17:49,670: INFO: main: ********** Stage 4 Transliteration completed **********
+
+]
+[2024-07-03 22:17:49,670: INFO: main: ********** Stage 5 Translation started **********]
+[2024-07-03 22:18:14,242: INFO: s_05_TRANSLATE_AI4BHARAT: Translations saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_05/05_translation.txt]
+[2024-07-03 22:18:14,242: INFO: main: ********** Stage 5 Translation completed **********
+
+]
+[2024-07-03 22:18:14,242: INFO: main: ********** Stage 6 English Grammar Correction started **********]
+[2024-07-03 22:18:21,651: INFO: s_06_ENG_GRAMMAR_VENNIFY: Corrected text saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_06/06_english_grammar.txt]
+[2024-07-03 22:18:21,653: INFO: s_06_ENG_GRAMMAR_VENNIFY: Original: My name is Hemanth, I am studying in TS University, I am a second year student.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.]
+[2024-07-03 22:18:21,653: INFO: s_06_ENG_GRAMMAR_VENNIFY: Corrected: Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.]
+[2024-07-03 22:18:21,653: INFO: main: ********** Stage 6 English Grammar Correction completed **********
+
+]
+[2024-07-03 22:58:16,757: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-03 22:58:26,864: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-03 22:58:26,865: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-03 22:58:26,866: INFO: main: ********** Stage 2 Audio Transcription started **********]
+[2024-07-03 22:58:30,792: INFO: s_02_ASR_ADDY88: Original Transcription: <s>ನ<s>ಾ<s>ನು<s> <s>ಹೆ<s>ಸ<s>ರು<s> <s>ಸ<s>ಮ<s>ೃ<s>ದ್<s> <s>ನ<s>ನ<s>ಗೆ<s> <s>ನ<s>ಾ<s>ಯಿ<s> <s>ಹ<s>ಸು<s> <s>ಮ<s>ತ್<s>ತು<s> <s>ಬೆ<s>ಕ್<s>ಕು<s> <s>ಇ<s>ಷ<s>್<s>ಟ<s> <s>ನಿ<s>ನ್<s>ನ<s>ಗೆ<s> <s>ಹೆ<s>ಸ<s>ರ<s>ೇ<s>ನು<s> <s>ನ<s>ಾ<s>ನ<s>ು<s> <s>ಪಿ<s>ಎ<s>ಸ<s>್<s> <s>ವಿ<s>ಶ್<s>ವ<s>ವ<s>ಿ<s>ದ್<s>ಯ<s>ವಿ<s>ದ್<s>ಯ<s>ಾ<s>ಲ<s>ಯ<s>ದ<s>ಲ್<s>ಲಿ<s> <s>ಓ<s>ದ<s>ು<s>ತ್<s>ತ<s>ಿ<s>ದ್ದ<s>ೇ<s>ನೆ<s> <s>]
+[2024-07-03 22:58:30,792: INFO: s_02_ASR_ADDY88: Cleaned Transcription: ನಾನು ಹೆಸರು ಸಮೃದ್ ನನಗೆ ನಾಯಿ ಹಸು ಮತ್ತು ಬೆಕ್ಕು ಇಷ್ಟ ನಿನ್ನಗೆ ಹೆಸರೇನು ನಾನು ಪಿಎಸ್ ವಿಶ್ವವಿದ್ಯವಿದ್ಯಾಲಯದಲ್ಲಿ ಓದುತ್ತಿದ್ದೇನೆ]
+[2024-07-03 22:58:30,792: INFO: s_02_ASR_ADDY88: Transcription saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_02/02_transcription.txt]
+[2024-07-03 22:58:30,792: INFO: main: ********** Stage 2 Audio Transcription completed **********
+
+]
+[2024-07-03 22:58:30,792: INFO: main: ********** Stage 3 Text Punctuation started **********]
+[2024-07-03 22:58:32,695: INFO: s_03_PUNCT_PCS47LANG: Punctuation results saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_03/03_punctuation.txt]
+[2024-07-03 22:58:32,695: INFO: main: ********** Stage 3 Text Punctuation completed **********
+
+]
+[2024-07-03 22:58:32,695: INFO: main: ********** Stage 4 Transliteration started **********]
+[2024-07-03 22:58:32,695: INFO: s_04_TRANSLIT_OM: Transliterated text saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_04/04_transliteration.txt]
+[2024-07-03 22:58:32,695: INFO: main: ********** Stage 4 Transliteration completed **********
+
+]
+[2024-07-03 22:58:32,695: INFO: main: ********** Stage 5 Translation started **********]
+[2024-07-03 22:58:52,183: INFO: s_05_TRANSLATE_AI4BHARAT: Translations saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_05/05_translation.txt]
+[2024-07-03 22:58:52,187: INFO: main: ********** Stage 5 Translation completed **********
+
+]
+[2024-07-03 22:58:52,187: INFO: main: ********** Stage 6 English Grammar Correction started **********]
+[2024-07-03 22:58:58,009: INFO: s_06_ENG_GRAMMAR_VENNIFY: Corrected text saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_06/06_english_grammar.txt]
+[2024-07-03 22:58:58,010: INFO: s_06_ENG_GRAMMAR_VENNIFY: Original: My name is Hemanth, I am studying in TS University, I am a second year student.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.]
+[2024-07-03 22:58:58,010: INFO: s_06_ENG_GRAMMAR_VENNIFY: Corrected: Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.]
+[2024-07-03 22:58:58,010: INFO: main: ********** Stage 6 English Grammar Correction completed **********
+
+]
+[2024-07-03 23:40:18,939: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-03 23:40:29,493: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-03 23:40:29,495: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-03 23:40:29,496: INFO: main: ********** Stage 1 Audio Splitting started **********]
+[2024-07-03 23:40:29,496: INFO: s_01_AUDIO_SEGMENT: Processing: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3]
+[2024-07-03 23:40:37,213: INFO: s_01_AUDIO_SEGMENT: Saved segment: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/segment_1.wav]
+[2024-07-03 23:40:37,215: INFO: s_01_AUDIO_SEGMENT: Saved segment: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/segment_2.wav]
+[2024-07-03 23:40:37,216: INFO: s_01_AUDIO_SEGMENT: Saved segment: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/segment_3.wav]
+[2024-07-03 23:40:37,218: INFO: s_01_AUDIO_SEGMENT: Saved segment: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/segment_4.wav]
+[2024-07-03 23:40:37,220: INFO: s_01_AUDIO_SEGMENT: Saved segment: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/segment_5.wav]
+[2024-07-03 23:40:37,222: INFO: s_01_AUDIO_SEGMENT: Saved segment: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/segment_6.wav]
+[2024-07-03 23:40:37,224: INFO: s_01_AUDIO_SEGMENT: Saved segment: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/segment_7.wav]
+[2024-07-03 23:40:37,225: INFO: s_01_AUDIO_SEGMENT: Saved segment: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/segment_8.wav]
+[2024-07-03 23:40:37,226: INFO: s_01_AUDIO_SEGMENT: Saved segment: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/segment_9.wav]
+[2024-07-03 23:40:37,228: INFO: s_01_AUDIO_SEGMENT: Saved segment: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/segment_10.wav]
+[2024-07-03 23:40:37,228: INFO: main: ********** Stage 1 Audio Splitting completed **********
+
+]
+[2024-07-03 23:40:37,228: INFO: main: ********** Stage 2 Audio Transcription started **********]
+[2024-07-03 23:40:40,897: INFO: s_02_ASR_ADDY88: Original Transcription: <s>ನ<s>ಾ<s>ನು<s> <s>ಹೆ<s>ಸ<s>ರು<s> <s>ಸ<s>ಮ<s>ೃ<s>ದ್<s> <s>ನ<s>ನ<s>ಗೆ<s> <s>ನ<s>ಾ<s>ಯಿ<s> <s>ಹ<s>ಸು<s> <s>ಮ<s>ತ್<s>ತು<s> <s>ಬೆ<s>ಕ್<s>ಕು<s> <s>ಇ<s>ಷ<s>್<s>ಟ<s> <s>ನಿ<s>ನ್<s>ನ<s>ಗೆ<s> <s>ಹೆ<s>ಸ<s>ರ<s>ೇ<s>ನು<s> <s>ನ<s>ಾ<s>ನ<s>ು<s> <s>ಪಿ<s>ಎ<s>ಸ<s>್<s> <s>ವಿ<s>ಶ್<s>ವ<s>ವ<s>ಿ<s>ದ್<s>ಯ<s>ವಿ<s>ದ್<s>ಯ<s>ಾ<s>ಲ<s>ಯ<s>ದ<s>ಲ್<s>ಲಿ<s> <s>ಓ<s>ದ<s>ು<s>ತ್<s>ತ<s>ಿ<s>ದ್ದ<s>ೇ<s>ನೆ<s> <s>]
+[2024-07-03 23:40:40,897: INFO: s_02_ASR_ADDY88: Cleaned Transcription: ನಾನು ಹೆಸರು ಸಮೃದ್ ನನಗೆ ನಾಯಿ ಹಸು ಮತ್ತು ಬೆಕ್ಕು ಇಷ್ಟ ನಿನ್ನಗೆ ಹೆಸರೇನು ನಾನು ಪಿಎಸ್ ವಿಶ್ವವಿದ್ಯವಿದ್ಯಾಲಯದಲ್ಲಿ ಓದುತ್ತಿದ್ದೇನೆ]
+[2024-07-03 23:40:40,897: INFO: s_02_ASR_ADDY88: Transcription saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_02/02_transcription.txt]
+[2024-07-03 23:40:40,897: INFO: main: ********** Stage 2 Audio Transcription completed **********
+
+]
+[2024-07-03 23:40:40,897: INFO: main: ********** Stage 3 Text Punctuation started **********]
+[2024-07-03 23:40:43,072: INFO: s_03_PUNCT_PCS47LANG: Punctuation results saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_03/03_punctuation.txt]
+[2024-07-03 23:40:43,072: INFO: main: ********** Stage 3 Text Punctuation completed **********
+
+]
+[2024-07-03 23:40:43,072: INFO: main: ********** Stage 4 Transliteration started **********]
+[2024-07-03 23:40:43,073: INFO: s_04_TRANSLIT_OM: Transliterated text saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_04/04_transliteration.txt]
+[2024-07-03 23:40:43,073: INFO: main: ********** Stage 4 Transliteration completed **********
+
+]
+[2024-07-03 23:40:43,073: INFO: main: ********** Stage 5 Translation started **********]
+[2024-07-03 23:41:02,734: INFO: s_05_TRANSLATE_AI4BHARAT: Translations saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_05/05_translation.txt]
+[2024-07-03 23:41:02,735: INFO: main: ********** Stage 5 Translation completed **********
+
+]
+[2024-07-03 23:41:02,735: INFO: main: ********** Stage 6 English Grammar Correction started **********]
+[2024-07-03 23:41:08,496: INFO: s_06_ENG_GRAMMAR_VENNIFY: Corrected text saved to: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_06/06_english_grammar.txt]
+[2024-07-03 23:41:08,496: INFO: s_06_ENG_GRAMMAR_VENNIFY: Original: My name is Hemanth, I am studying in TS University, I am a second year student.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.
+Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University
+Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.]
+[2024-07-03 23:41:08,496: INFO: s_06_ENG_GRAMMAR_VENNIFY: Corrected: Output: Input: I am Samrid I like dog, cow and cat What is your name I am studying in PS University Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studying at PS University.]
+[2024-07-03 23:41:08,496: INFO: main: ********** Stage 6 English Grammar Correction completed **********
 
 ]

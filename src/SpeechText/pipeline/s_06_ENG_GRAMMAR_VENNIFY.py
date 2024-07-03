@@ -8,7 +8,7 @@ sys.path.append(project_root)
 from src.SpeechText import logger
 
 STAGE_NAME = "English Grammar Correction Stage"
-os.makedirs("../../artifacts/STAGE_05", exist_ok=True)
+os.makedirs("../../artifacts/STAGE_06", exist_ok=True)
 
 class GrammarCorrection:
     def __init__(self, input_file, output_file, model_name):
@@ -64,8 +64,8 @@ class GrammarCorrection:
 if __name__ == "__main__":
     try:
         logger.info(f"********** stage {STAGE_NAME} started **********")
-        input_file = "../../artifacts/STAGE_04/04_translation.txt"
-        output_file = "../../artifacts/STAGE_05/05_english_grammar.txt"
+        input_file = "../../artifacts/STAGE_05/05_translation.txt"
+        output_file = "../../artifacts/STAGE_06/06_english_grammar.txt"
         model_name = "vennify/t5-base-grammar-correction"
 
         obj = GrammarCorrection(input_file, output_file, model_name)
