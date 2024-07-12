@@ -7,7 +7,6 @@ tokenizer_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'IndicT
 sys.path.append(tokenizer_path)
 
 from IndicTransTokenizer import IndicProcessor
-import sys
 
 project_root = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(project_root)
@@ -23,11 +22,11 @@ class TextTranslation:
         self.output_file = output_file
         self.model_name = model_name
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-        self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name, trust_remote_code=True)
+        self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name, trust_remote_code=True).to(self.device)
         self.ip = IndicProcessor(inference=True)
         self.src_lang = "kan_Knda"
         self.tgt_lang = "eng_Latn"
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     def read_input_texts(self):
         try:
@@ -63,7 +62,10 @@ class TextTranslation:
                 padding="longest",
                 return_tensors="pt",
                 return_attention_mask=True,
-            ).to(self.device)
+            )
+
+            # Move inputs to the same device as the model
+            inputs = {k: v.to(self.device) for k, v in inputs.items()}
 
             with torch.no_grad():
                 generated_tokens = self.model.generate(
@@ -74,9 +76,11 @@ class TextTranslation:
                     num_beams=5,
                     num_return_sequences=1,
                 )
+            generated_tokens = generated_tokens.cpu()
+
             with self.tokenizer.as_target_tokenizer():
                 generated_tokens = self.tokenizer.batch_decode(
-                    generated_tokens.detach().cpu().tolist(),
+                    generated_tokens.tolist(),
                     skip_special_tokens=True,
                     clean_up_tokenization_spaces=True,
                 )

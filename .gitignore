@@ -12,3 +12,5 @@ SPEECH2TEXT_DIVIDIDE-CONQURE_DASHBOARD-main/*mp4
 
 src/SpeechText/__pycache__/*
 src/SpeechText/pipeline/__pycache__/*
+
+model2_env/

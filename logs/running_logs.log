@@ -227,3 +227,231 @@ Output: My name is Samrid, I like dog, cow and cat. What's your name? I'm studyi
 [2024-07-03 23:41:08,496: INFO: main: ********** Stage 6 English Grammar Correction completed **********
 
 ]
+[2024-07-10 14:53:36,697: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-10 14:53:49,482: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-10 14:53:49,483: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-10 14:53:49,484: INFO: main: ********** Stage 2 Audio Transcription started **********]
+[2024-07-10 14:53:49,484: ERROR: main: AudioTranscription.__init__() missing 1 required positional argument: 'target_lang']
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 61, in <module>
+    transcription = AudioTranscription(audio_file, output_dir, model_id)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AudioTranscription.__init__() missing 1 required positional argument: 'target_lang'
+[2024-07-10 15:10:21,121: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-10 15:10:31,351: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-10 15:10:31,354: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-10 15:10:31,354: INFO: main: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:10:34,965: INFO: run_stage_01: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:10:35,898: WARNING: train_logger: torchvision is not available - cannot save figures]
+[2024-07-10 15:10:42,827: INFO: run_stage_01: ********** Stage 1 Speech Diarization completed **********
+
+]
+[2024-07-10 15:10:43,579: INFO: main: ********** Stage 1 Speech Diarization completed **********
+
+]
+[2024-07-10 15:10:43,580: INFO: main: ********** Stage 2 Audio Transcription started **********]
+[2024-07-10 15:10:43,580: ERROR: main: AudioTranscription.__init__() missing 1 required positional argument: 'target_lang']
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 54, in <module>
+    transcription = AudioTranscription(audio_file, output_dir, model_id)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AudioTranscription.__init__() missing 1 required positional argument: 'target_lang'
+[2024-07-10 15:12:12,833: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-10 15:12:32,771: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-10 15:12:32,774: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-10 15:12:32,774: INFO: main: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:12:37,941: INFO: run_stage_01: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:12:39,647: WARNING: train_logger: torchvision is not available - cannot save figures]
+[2024-07-10 15:12:48,099: ERROR: run_stage_01: Destination path '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/Cleaned_denoiser_facebook_1_input.mp3_CUTS/CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3' already exists]
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py", line 17, in <module>
+    audio_split.main()
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/src/SpeechText/pipeline/s_01_DASHBOARD_FLAVOUR.py", line 85, in main
+    self.process_audio(mp3_file)
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/src/SpeechText/pipeline/s_01_DASHBOARD_FLAVOUR.py", line 77, in process_audio
+    shutil.move(os.path.join(output_directory, file), new_dir)
+  File "/usr/lib/python3.11/shutil.py", line 851, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+shutil.Error: Destination path '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/Cleaned_denoiser_facebook_1_input.mp3_CUTS/CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3' already exists
+[2024-07-10 15:12:49,125: ERROR: main: Command '['/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/model2_env/bin/python', '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py']' returned non-zero exit status 1.]
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 41, in <module>
+    run_stage_01()
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 20, in run_stage_01
+    subprocess.run([stage_01_venv, stage_01_script], check=True)
+  File "/usr/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/model2_env/bin/python', '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py']' returned non-zero exit status 1.
+[2024-07-10 15:14:11,448: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-10 15:14:29,277: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-10 15:14:29,279: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-10 15:14:29,279: INFO: main: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:14:34,042: INFO: run_stage_01: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:14:35,549: WARNING: train_logger: torchvision is not available - cannot save figures]
+[2024-07-10 15:14:45,055: ERROR: run_stage_01: Destination path '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/Cleaned_denoiser_facebook_1_input.mp3_CUTS/CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3' already exists]
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py", line 17, in <module>
+    audio_split.main()
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/src/SpeechText/pipeline/s_01_DASHBOARD_FLAVOUR.py", line 85, in main
+    self.process_audio(mp3_file)
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/src/SpeechText/pipeline/s_01_DASHBOARD_FLAVOUR.py", line 77, in process_audio
+    shutil.move(os.path.join(output_directory, file), new_dir)
+  File "/usr/lib/python3.11/shutil.py", line 851, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+shutil.Error: Destination path '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/Cleaned_denoiser_facebook_1_input.mp3_CUTS/CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3' already exists
+[2024-07-10 15:14:46,074: ERROR: main: Command '['/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/model2_env/bin/python', '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py']' returned non-zero exit status 1.]
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 41, in <module>
+    run_stage_01()
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 20, in run_stage_01
+    subprocess.run([stage_01_venv, stage_01_script], check=True)
+  File "/usr/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/model2_env/bin/python', '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py']' returned non-zero exit status 1.
+[2024-07-10 15:16:44,239: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-10 15:17:00,366: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-10 15:17:00,369: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-10 15:17:00,370: INFO: main: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:17:05,176: INFO: run_stage_01: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:17:12,339: WARNING: train_logger: torchvision is not available - cannot save figures]
+[2024-07-10 15:17:21,923: INFO: run_stage_01: ********** Stage 1 Speech Diarization completed **********
+
+]
+[2024-07-10 15:17:22,966: INFO: main: ********** Stage 1 Speech Diarization completed **********
+
+]
+[2024-07-10 15:17:22,966: INFO: main: ********** Stage 2 Audio Transcription started **********]
+[2024-07-10 15:17:22,966: ERROR: main: AudioTranscription.__init__() missing 1 required positional argument: 'target_lang']
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 54, in <module>
+    transcription = AudioTranscription(audio_file, output_dir, model_id)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AudioTranscription.__init__() missing 1 required positional argument: 'target_lang'
+[2024-07-10 15:34:32,214: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-10 15:34:42,716: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-10 15:34:42,718: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-10 15:34:42,719: INFO: main: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:34:47,348: INFO: run_stage_01: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:34:47,349: INFO: s_01_DASHBOARD_FLAVOUR: Processing file: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3]
+[2024-07-10 15:34:48,585: WARNING: train_logger: torchvision is not available - cannot save figures]
+[2024-07-10 15:34:59,022: INFO: s_01_DASHBOARD_FLAVOUR: Number of segments detected: 1]
+[2024-07-10 15:34:59,022: INFO: s_01_DASHBOARD_FLAVOUR: Processing segment 0: speaker=speaker_SPEAKER_00, start=1.6, end=11.6]
+[2024-07-10 15:34:59,022: INFO: s_01_DASHBOARD_FLAVOUR: Running ffmpeg command: ffmpeg -y -i /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3 -ss 1.6 -to 11.6 -c:a libmp3lame -q:a 0 -vn -c copy /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3]
+[2024-07-10 15:34:59,105: ERROR: run_stage_01: name 'result' is not defined]
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py", line 17, in <module>
+    audio_split.main()
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/src/SpeechText/pipeline/s_01_DASHBOARD_FLAVOUR.py", line 94, in main
+    self.process_audio(mp3_file)
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/src/SpeechText/pipeline/s_01_DASHBOARD_FLAVOUR.py", line 74, in process_audio
+    if result.returncode != 0:
+       ^^^^^^
+NameError: name 'result' is not defined
+[2024-07-10 15:35:00,151: ERROR: main: Command '['/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/model2_env/bin/python', '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py']' returned non-zero exit status 1.]
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 41, in <module>
+    run_stage_01()
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 20, in run_stage_01
+    subprocess.run([stage_01_venv, stage_01_script], check=True)
+  File "/usr/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/model2_env/bin/python', '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py']' returned non-zero exit status 1.
+[2024-07-10 15:36:20,213: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-10 15:36:31,644: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-10 15:36:31,647: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-10 15:36:31,647: INFO: main: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:36:35,195: INFO: run_stage_01: ********** Stage 1 Speech Diarization started **********]
+[2024-07-10 15:36:35,196: INFO: s_01_DASHBOARD_FLAVOUR: Processing file: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3]
+[2024-07-10 15:36:37,731: WARNING: train_logger: torchvision is not available - cannot save figures]
+[2024-07-10 15:36:44,756: INFO: s_01_DASHBOARD_FLAVOUR: Number of segments detected: 1]
+[2024-07-10 15:36:44,756: INFO: s_01_DASHBOARD_FLAVOUR: Processing segment 0: speaker=speaker_SPEAKER_00, start=1.6, end=11.6]
+[2024-07-10 15:36:44,756: INFO: s_01_DASHBOARD_FLAVOUR: Running ffmpeg command: ffmpeg -y -i /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3 -ss 1.6 -to 11.6 -c:a libmp3lame -q:a 0 -vn -c copy /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3]
+[2024-07-10 15:36:44,817: INFO: s_01_DASHBOARD_FLAVOUR: Created segment file: CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3]
+[2024-07-10 15:36:44,817: INFO: s_01_DASHBOARD_FLAVOUR: Total number of files processed: 1]
+[2024-07-10 15:36:44,817: INFO: s_01_DASHBOARD_FLAVOUR: Total number of output files created: 1]
+[2024-07-10 15:36:44,817: INFO: run_stage_01: ********** Stage 1 Speech Diarization completed **********
+
+]
+[2024-07-10 15:36:45,526: INFO: main: ********** Stage 1 Speech Diarization completed **********
+
+]
+[2024-07-10 15:36:45,527: INFO: main: ********** Stage 2 Audio Transcription started **********]
+[2024-07-10 15:36:45,527: ERROR: main: AudioTranscription.__init__() missing 1 required positional argument: 'target_lang']
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 54, in <module>
+    transcription = AudioTranscription(audio_file, output_dir, model_id)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AudioTranscription.__init__() missing 1 required positional argument: 'target_lang'
+[2024-07-11 15:04:31,254: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-11 15:04:47,011: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-11 15:04:47,014: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-11 15:04:47,014: INFO: main: ********** Stage 1 Speech Diarization started **********]
+[2024-07-11 15:04:51,509: INFO: run_stage_01: ********** Stage 1 Speech Diarization started **********]
+[2024-07-11 15:04:51,510: INFO: s_01_DASHBOARD_FLAVOUR: Processing file: /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3]
+[2024-07-11 15:04:53,763: WARNING: train_logger: torchvision is not available - cannot save figures]
+[2024-07-11 15:05:00,326: INFO: s_01_DASHBOARD_FLAVOUR: Number of segments detected: 1]
+[2024-07-11 15:05:00,326: INFO: s_01_DASHBOARD_FLAVOUR: Processing segment 0: speaker=speaker_SPEAKER_00, start=1.6, end=11.6]
+[2024-07-11 15:05:00,326: INFO: s_01_DASHBOARD_FLAVOUR: Running ffmpeg command: ffmpeg -y -i /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3 -ss 1.6 -to 11.6 -c:a libmp3lame -q:a 0 -vn -c copy /home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3]
+[2024-07-11 15:05:00,394: INFO: s_01_DASHBOARD_FLAVOUR: Created segment file: CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3]
+[2024-07-11 15:05:00,394: ERROR: run_stage_01: Destination path '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/Cleaned_denoiser_facebook_1_input.mp3_CUTS/CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3' already exists]
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py", line 17, in <module>
+    audio_split.main()
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/src/SpeechText/pipeline/s_01_DASHBOARD_FLAVOUR.py", line 94, in main
+    self.process_audio(mp3_file)
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/src/SpeechText/pipeline/s_01_DASHBOARD_FLAVOUR.py", line 86, in process_audio
+    shutil.move(os.path.join(output_directory, file), new_dir)
+  File "/usr/lib/python3.11/shutil.py", line 851, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+shutil.Error: Destination path '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_01/AUDIO/Cleaned_denoiser_facebook_1_input.mp3_CUTS/CUT_Cleaned_denoiser_facebook_1_input.mp3__0__.mp3' already exists
+[2024-07-11 15:05:01,196: ERROR: main: Command '['/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/model2_env/bin/python', '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py']' returned non-zero exit status 1.]
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 41, in <module>
+    run_stage_01()
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 20, in run_stage_01
+    subprocess.run([stage_01_venv, stage_01_script], check=True)
+  File "/usr/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/model2_env/bin/python', '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/run_stage_01.py']' returned non-zero exit status 1.
+[2024-07-11 15:05:59,614: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-11 15:06:11,680: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-11 15:06:11,682: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-11 15:06:11,683: INFO: main: ********** Stage 2 Audio Transcription started **********]
+[2024-07-11 15:06:11,683: ERROR: main: AudioTranscription.__init__() missing 1 required positional argument: 'target_lang']
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 54, in <module>
+    transcription = AudioTranscription(audio_file, output_dir, model_id)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AudioTranscription.__init__() missing 1 required positional argument: 'target_lang'
+[2024-07-11 15:08:17,830: INFO: main: ********** Stage 0 Audio Denoising started **********]
+[2024-07-11 15:08:29,023: INFO: s_00_DENOISER_DNS_64: STOI SCORE : 0.9999900286203258]
+[2024-07-11 15:08:29,025: INFO: main: ********** Stage 0 Audio Denoising completed **********
+
+]
+[2024-07-11 15:08:29,025: INFO: main: ********** Stage 2 Audio Transcription started **********]
+[2024-07-11 15:08:31,461: ERROR: main: [Errno 20] Not a directory: '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3']
+Traceback (most recent call last):
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/main.py", line 56, in <module>
+    transcription.main()
+  File "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/src/SpeechText/pipeline/s_02_ASR_ADDY88.py", line 60, in main
+    audio_files = [f for f in os.listdir(self.input_dir) if f.endswith('.mp3')]
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+NotADirectoryError: [Errno 20] Not a directory: '/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/artifacts/STAGE_00/Cleaned_denoiser_facebook_1_input.mp3'

@@ -1,18 +1,24 @@
 import os
 import sys
+import subprocess
 
 project_root = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(project_root)
 
 from src.SpeechText import logger
 from src.SpeechText.pipeline.s_00_DENOISER_DNS_64 import AudioDenoising
-# from src.SpeechText.pipeline.s_01_SPEECH_SEP import SpeechSeparation
-from src.SpeechText.pipeline.s_01_AUDIO_SEGMENT import AudioSplitting
+# from src.SpeechText.pipeline.s_01_DASHBOARD_FLAVOUR import SpeakerDiarization
 from src.SpeechText.pipeline.s_02_ASR_ADDY88 import AudioTranscription
 from src.SpeechText.pipeline.s_03_PUNCT_PCS47LANG import TextPunctuation
 from src.SpeechText.pipeline.s_04_TRANSLIT_OM import TextTransliteration
 from src.SpeechText.pipeline.s_05_TRANSLATE_AI4BHARAT import TextTranslation
 from src.SpeechText.pipeline.s_06_ENG_GRAMMAR_VENNIFY import GrammarCorrection
+
+def run_stage_01():
+    stage_01_venv = "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/model2_env/bin/python"
+    stage_01_script = os.path.join(project_root, "run_stage_01.py")
+    subprocess.run([stage_01_venv, stage_01_script], check=True)
+
 
 STAGE_NAME = "Stage 0 Audio Denoising"
 try:
@@ -28,29 +34,15 @@ except Exception as e:
     logger.exception(e)
     raise e
 
-# STAGE_NAME = "Stage 1 Speech Separation"
+
+# STAGE_NAME = "Stage 1 Speech Diarization"
 # try:
 #     logger.info(f"********** {STAGE_NAME} started **********")
-#     input_file = os.path.join(project_root, "artifacts", "STAGE_00", "Cleaned_denoiser_facebook_1_input.mp3")
-#     output_dir = os.path.join(project_root, "artifacts", "STAGE_01")
-#     speech_sep = SpeechSeparation(input_file, output_dir)
-#     speech_sep.main()
+#     run_stage_01()
 #     logger.info(f"********** {STAGE_NAME} completed **********\n\n")
 # except Exception as e:
 #     logger.exception(e)
 #     raise e
-
-STAGE_NAME = "Stage 1 Audio Splitting"
-try:
-    logger.info(f"********** {STAGE_NAME} started **********")
-    input_file = os.path.join(project_root, "artifacts", "STAGE_00", "Cleaned_denoiser_facebook_1_input.mp3")
-    output_dir = os.path.join(project_root, "artifacts", "STAGE_01")
-    audio_split = AudioSplitting(input_file, output_dir)
-    audio_split.main()
-    logger.info(f"********** {STAGE_NAME} completed **********\n\n")
-except Exception as e:
-    logger.exception(e)
-    raise e
 
 
 STAGE_NAME = "Stage 2 Audio Transcription"
@@ -59,7 +51,8 @@ try:
     audio_file = os.path.join(project_root, "artifacts", "STAGE_00", "Cleaned_denoiser_facebook_1_input.mp3")
     output_dir = os.path.join(project_root, "artifacts", "STAGE_02")
     model_id = "addy88/wav2vec2-kannada-stt"
-    transcription = AudioTranscription(audio_file, output_dir, model_id)
+    target_lang = "kan"
+    transcription = AudioTranscription(audio_file, output_dir, model_id, target_lang)
     transcription.main()
     logger.info(f"********** {STAGE_NAME} completed **********\n\n")
 except Exception as e:
