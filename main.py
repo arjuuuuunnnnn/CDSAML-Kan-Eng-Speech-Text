@@ -7,7 +7,7 @@ sys.path.append(project_root)
 
 from src.SpeechText import logger
 from src.SpeechText.pipeline.s_00_DENOISER_DNS_64 import AudioDenoising
-# from src.SpeechText.pipeline.s_01_DASHBOARD_FLAVOUR import SpeakerDiarization
+#from src.SpeechText.pipeline.s_01_DASHBOARD_FLAVOUR import SpeakerDiarization
 from src.SpeechText.pipeline.s_02_ASR_ADDY88 import AudioTranscription
 from src.SpeechText.pipeline.s_03_PUNCT_PCS47LANG import TextPunctuation
 from src.SpeechText.pipeline.s_04_TRANSLIT_OM import TextTransliteration
@@ -35,20 +35,21 @@ except Exception as e:
     raise e
 
 
-# STAGE_NAME = "Stage 1 Speech Diarization"
-# try:
-#     logger.info(f"********** {STAGE_NAME} started **********")
-#     run_stage_01()
-#     logger.info(f"********** {STAGE_NAME} completed **********\n\n")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
+STAGE_NAME = "Stage 1 Speech Diarization"
+try:
+    logger.info(f"********** {STAGE_NAME} started **********")
+    run_stage_01()
+    logger.info(f"********** {STAGE_NAME} completed **********\n\n")
+except Exception as e:
+    logger.exception(e)
+    raise e
 
 
 STAGE_NAME = "Stage 2 Audio Transcription"
 try:
     logger.info(f"********** {STAGE_NAME} started **********")
-    audio_file = os.path.join(project_root, "artifacts", "STAGE_00", "Cleaned_denoiser_facebook_1_input.mp3")
+    # audio_file = os.path.join(project_root, "artifacts", "STAGE_00", "Cleaned_denoiser_facebook_1_input.mp3")
+    audio_file = os.path.join(project_root, "artifacts", "STAGE_01")
     output_dir = os.path.join(project_root, "artifacts", "STAGE_02")
     model_id = "addy88/wav2vec2-kannada-stt"
     target_lang = "kan"

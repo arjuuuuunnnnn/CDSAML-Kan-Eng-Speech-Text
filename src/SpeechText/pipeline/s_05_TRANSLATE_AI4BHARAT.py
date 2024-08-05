@@ -21,12 +21,13 @@ class TextTranslation:
         self.input_file = input_file
         self.output_file = output_file
         self.model_name = model_name
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        logger.info(f"Using device: {self.device}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
         self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name, trust_remote_code=True).to(self.device)
         self.ip = IndicProcessor(inference=True)
         self.src_lang = "kan_Knda"
-        self.tgt_lang = "eng_Latn"
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.tgt_lang = "eng_Latn" 
 
     def read_input_texts(self):
         try:

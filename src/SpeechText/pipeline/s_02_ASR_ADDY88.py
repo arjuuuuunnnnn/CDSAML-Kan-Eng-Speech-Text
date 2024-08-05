@@ -56,12 +56,26 @@ class AudioTranscription:
         except Exception as e:
             logger.error(f"Error processing {audio_file}: {e}")
 
+    # def main(self):
+    #     audio_files = [f for f in os.listdir(self.input_dir) if f.endswith('.mp3')]
+    #     num_processes = min(cpu_count(), len(audio_files))
+        
+    #     process_func = functools.partial(self.process_audio_file)
+        
+    #     with Pool(num_processes) as pool:
+    #         pool.starmap(process_func, enumerate(audio_files))
+
     def main(self):
         audio_files = [f for f in os.listdir(self.input_dir) if f.endswith('.mp3')]
-        num_processes = min(cpu_count(), len(audio_files))
-        
+    
+        if not audio_files:
+            print("No .mp3 files found in the input directory.")
+            return
+    
+        num_processes = max(1, min(cpu_count(), len(audio_files)))
+    
         process_func = functools.partial(self.process_audio_file)
-        
+    
         with Pool(num_processes) as pool:
             pool.starmap(process_func, enumerate(audio_files))
 
