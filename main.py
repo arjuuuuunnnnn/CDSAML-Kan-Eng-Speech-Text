@@ -14,11 +14,23 @@ from src.SpeechText.pipeline.s_04_TRANSLIT_OM import TextTransliteration
 from src.SpeechText.pipeline.s_05_TRANSLATE_AI4BHARAT import TextTranslation
 from src.SpeechText.pipeline.s_06_ENG_GRAMMAR_VENNIFY import GrammarCorrection
 
+
 def run_stage_01():
     stage_01_venv = "/home/hemanth/only_ml/CDSAML-Kan-Eng-Speect-Text/model2_env/bin/python"
     stage_01_script = os.path.join(project_root, "run_stage_01.py")
     subprocess.run([stage_01_venv, stage_01_script], check=True)
 
+def track_memory_usage():
+    max_memory = 0
+    process = psutil.Process(os.getpid())
+    while True:
+        current_memory = process.memory_info().rss / (1024 ** 3)
+        if current_memory > max_memory:
+            max_memory = current_memory
+        yield max_memory
+
+
+memory_tracker = track_memory_usage()
 
 STAGE_NAME = "Stage 0 Audio Denoising"
 try:
@@ -111,3 +123,5 @@ except Exception as e:
     logger.exception(e)
     raise e
 
+max_memory_used = next(memory_tracker)
+logger.info(f"Max memory used: {max_memory_used} GB")
